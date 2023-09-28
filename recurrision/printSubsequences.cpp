@@ -2,11 +2,12 @@
 #include<vector>
 using namespace std;
 
-void solve(int arr[],vector<int> ans,int n,int indx){
+void solve(int arr[],vector<int> &ans,int n,int indx){
     if(indx == n){
         for(auto it: ans){
             cout<<it<<" ";
         }
+        cout<<endl;
         return;
     }
 
