@@ -44,7 +44,7 @@ int main(){
     int n = sizeof(v)/sizeof(v[0]);
     
     mSort(v,0,n-1);
-    for (int i : v) {
+    for (auto &i : v) {
         cout << i << " ";
     }
 }
