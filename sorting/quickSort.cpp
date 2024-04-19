@@ -8,11 +8,11 @@ int partition(int *v,int low ,int high){
     int i = low;
     int j = high;
 
-    while(true){
-        while(v[i]<= pivot && i<=j){
+    while(i<j){
+        while(v[i]<= pivot && i<=high-1){
             i++;
         }
-        while(v[j]>pivot && i<=j){
+        while(v[j]>pivot && i<=low+1){
             j--;
         }
         if(i<j) {
@@ -34,7 +34,7 @@ void qSort(int *v,int low,int high){
 }
 int main(){
 
-    int v[] = {5,4,3,45,7,66,1,2,0};
+    int v[] = {5,4,3,2,1};
     int n = sizeof(v)/sizeof(v[0]);
     
     qSort(v,0,n-1);
